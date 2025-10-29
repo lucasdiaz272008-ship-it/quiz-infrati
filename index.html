@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Infraestructura TI </title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <h1>juego de Infraestructura (TI)</h1>
+
+  <div id="inicio">
+    <p>Ingresa tu nombre para comenzar:</p>
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <button id="botonInicio">Comenzar</button>
+  </div>
+
+  <div id="juego" style="display:none;">
+    <div id="temporizador">⏱️ Tiempo: <span id="tiempo">15</span>s</div>
+    <div class="pregunta" id="pregunta"></div>
+    <div id="opciones"></div>
+    <div id="feedback" style="margin-top:10px;"></div>
+  </div>
+
+  <div class="resultado" id="resultado" style="display:none;"></div>
+  <div class="ranking" id="ranking" style="display:none;"></div>
+
+
+  <script src="juego.js"></script>
+</body>
+</html> 
