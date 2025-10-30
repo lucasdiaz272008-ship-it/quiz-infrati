@@ -1,115 +1,52 @@
+/* 1. Estilos Base (Aplicados a todas las pantallas) */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
-  margin: 0;
-  padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho total */
+    background-color: #f4f4f4;
 }
 
-h1 {
-  color: #2c3e50;
-  font-size: 24px;
-  margin-bottom: 15px;
+/* El elemento principal que quieres que se adapte */
+.contenedor-adaptable {
+    width: 90%; /* Por defecto, ocupa el 90% del ancho de la pantalla */
+    max-width: 1200px; /* Ancho máximo para pantallas muy grandes */
+    margin: 20px auto; /* Centra el div horizontalmente (arriba/abajo 20px, izquierda/derecha auto) */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-input, button {
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  width: 90%;
-  max-width: 280px;
-  margin: 5px auto;
-  display: block;
+/* 2. Media Queries (Ajustes para diferentes tamaños de pantalla) */
+
+/* Pantallas pequeñas (Ej. Teléfonos móviles, hasta 600px) */
+@media screen and (max-width: 600px) {
+    .contenedor-adaptable {
+        width: 95%; /* Ocupa un poco más en pantallas muy pequeñas */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente para móviles */
+    }
 }
 
-button {
-  background-color: #26a69a;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+/* Pantallas medianas (Ej. Tablets, de 601px a 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .contenedor-adaptable {
+        width: 85%; /* Un ancho intermedio */
+    }
 }
 
-button:hover {
-  background-color: #00796b;
+/* Pantallas grandes (Ej. Escritorio, a partir de 901px) */
+/* No es necesario un bloque adicional si los estilos base son suficientes,
+   pero podrías ajustar detalles si lo requieres */
+/*
+@media screen and (min-width: 901px) {
+    .contenedor-adaptable {
+        width: 80%;
+    }
 }
-
-.pregunta {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #37474f;
-}
-
-#opciones button {
-  background-color: #80cbc4;
-  color: #004d40;
-  margin: 6px auto;
-  font-size: 14px;
-}
-
-#feedback {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #555;
-}
-
-#temporizador {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #00695c;
-}
-
-.resultado {
-  font-size: 16px;
-  margin-top: 15px;
-  color: #2e7d32;
-  padding: 10px;
-}
-
-.ranking {
-  margin-top: 20px;
-  font-size: 15px;
-  color: #37474f;
-  padding: 10px;
-}
-
-.ranking ol {
-  list-style: none;
-  padding: 0;
-}
-
-.ranking li {
-  margin: 4px 0;
-  padding: 6px;
-  background-color: #e0f2f1;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.reiniciar {
-  margin-top: 20px;
-}
-
-/* Ajustes para pantallas más grandes */
-@media (min-width: 600px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  .pregunta {
-    font-size: 20px;
-  }
-
-  .ranking li {
-    font-size: 16px;
-  }
-
-  input, button {
-    font-size: 16px;
-  }
-
-  #opciones button {
-    font-size: 16px;
-  }
-}
+*/
