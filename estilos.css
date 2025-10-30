@@ -1,93 +1,75 @@
-/* Estilo base para todo tipo de pantalla */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
   margin: 0;
-  padding: 20px;
+  padding: 10px;
 }
 
 h1 {
   color: #2c3e50;
-  font-size: 6vw;
-  margin-bottom: 20px;
-  animation: aparecer 1s ease-in-out;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-@keyframes aparecer {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-input {
+input, button {
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
   width: 90%;
-  max-width: 300px;
-  margin-bottom: 10px;
+  max-width: 280px;
+  margin: 5px auto;
+  display: block;
 }
 
 button {
-  padding: 12px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
   background-color: #26a69a;
   color: white;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
-  width: 90%;
-  max-width: 300px;
 }
 
 button:hover {
   background-color: #00796b;
-  transform: scale(1.05);
 }
 
 .pregunta {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 5vw;
+  font-size: 16px;
   color: #37474f;
-  padding: 10px;
 }
 
 #opciones button {
-  display: block;
-  margin: 8px auto;
-  width: 95%;
-  max-width: 400px;
   background-color: #80cbc4;
   color: #004d40;
-  font-size: 16px;
+  margin: 6px auto;
+  font-size: 14px;
 }
 
 #feedback {
-  margin-top: 10px;
-  font-style: italic;
-  font-size: 16px;
+  margin-top: 8px;
+  font-size: 14px;
   color: #555;
 }
 
 #temporizador {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
   color: #00695c;
 }
 
 .resultado {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 15px;
   color: #2e7d32;
   padding: 10px;
 }
 
 .ranking {
-  margin-top: 30px;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: 15px;
   color: #37474f;
   padding: 10px;
 }
@@ -98,36 +80,36 @@ button:hover {
 }
 
 .ranking li {
-  margin: 5px 0;
-  padding: 8px;
+  margin: 4px 0;
+  padding: 6px;
   background-color: #e0f2f1;
   border-radius: 5px;
-  font-size: 4.5vw;
+  font-size: 14px;
 }
 
 .reiniciar {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-/* Ajustes para pantallas más grandes (tablets y PC) */
+/* Ajustes para pantallas más grandes */
 @media (min-width: 600px) {
   h1 {
     font-size: 32px;
   }
 
   .pregunta {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .ranking li {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  button, input {
-    font-size: 18px;
+  input, button {
+    font-size: 16px;
   }
 
   #opciones button {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
