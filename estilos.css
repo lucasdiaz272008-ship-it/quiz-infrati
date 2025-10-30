@@ -37,10 +37,11 @@ h1 {
 }
 
 .encabezado h2 {
-    color: #6c757d; /* Color gris para el nombre de la escuela */
+    color: #8d9aa5; /* Color gris para el nombre de la escuela */
     font-size: 1em;
     font-weight: normal;
     margin-top: 0;
+
 }
 
 /* Estilos de botones e inputs */

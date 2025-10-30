@@ -14,6 +14,7 @@ let preguntas = [
 let indice = 0, puntaje = 0, tiempo = 15, temporizador, nombreJugador = "";
 
 document.getElementById("botonInicio").onclick = () => {
+ 
   nombreJugador = document.getElementById("nombre").value.trim();
   if (nombreJugador === "") return alert("Ingresa tu nombre");
   document.getElementById("inicio").style.display = "none";
