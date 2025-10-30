@@ -1,3 +1,4 @@
+/* Estilo base para todo tipo de pantalla */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -8,9 +9,9 @@ body {
 
 h1 {
   color: #2c3e50;
-  animation: aparecer 1s ease-in-out;
   font-size: 6vw;
   margin-bottom: 20px;
+  animation: aparecer 1s ease-in-out;
 }
 
 @keyframes aparecer {
@@ -22,8 +23,9 @@ input {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   max-width: 300px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -36,7 +38,7 @@ button {
   background-color: #26a69a;
   color: white;
   transition: 0.3s;
-  width: 80%;
+  width: 90%;
   max-width: 300px;
 }
 
@@ -50,15 +52,17 @@ button:hover {
   margin-bottom: 10px;
   font-size: 5vw;
   color: #37474f;
+  padding: 10px;
 }
 
 #opciones button {
   display: block;
   margin: 8px auto;
-  width: 90%;
+  width: 95%;
   max-width: 400px;
   background-color: #80cbc4;
   color: #004d40;
+  font-size: 16px;
 }
 
 #feedback {
@@ -105,7 +109,7 @@ button:hover {
   margin-top: 30px;
 }
 
-/* Responsive ajustes */
+/* Ajustes para pantallas más grandes (tablets y PC) */
 @media (min-width: 600px) {
   h1 {
     font-size: 32px;
@@ -116,6 +120,14 @@ button:hover {
   }
 
   .ranking li {
+    font-size: 18px;
+  }
+
+  button, input {
+    font-size: 18px;
+  }
+
+  #opciones button {
     font-size: 18px;
   }
 }
