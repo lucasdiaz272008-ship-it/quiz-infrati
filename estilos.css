@@ -1,31 +1,25 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f0f4f8;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
   margin: 0;
   padding: 20px;
 }
 
 h1 {
   color: #2c3e50;
+  animation: aparecer 1s ease-in-out;
 }
 
-.encabezado img {
-  height: 80px;
-}
-
-.encabezado h2 {
-  margin: 10px 0;
-  color: #34495e;
-}
-
-#inicio, #juego, #resultado, #ranking {
-  margin-top: 20px;
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 input {
   padding: 10px;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 button {
@@ -33,22 +27,68 @@ button {
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #26a69a;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00796b;
+  transform: scale(1.05);
 }
 
 .pregunta {
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 18px;
+  color: #37474f;
 }
 
 #opciones button {
   display: block;
-  margin: 5px auto;
-  width: 60%;
+  margin: 8px auto;
+  width: 70%;
+  background-color: #80cbc4;
+  color: #004d40;
 }
 
 #feedback {
   margin-top: 10px;
   font-style: italic;
+  font-size: 16px;
+  color: #555;
+}
+
+#temporizador {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #00695c;
+}
+
+.resultado {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #2e7d32;
+}
+
+.ranking {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #37474f;
+}
+
+.ranking ol {
+  list-style: none;
+  padding: 0;
+}
+
+.ranking li {
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #e0f2f1;
+  border-radius: 5px;
 }
 
 .reiniciar {
